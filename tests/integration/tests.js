@@ -61,13 +61,13 @@ describe('calculator functionality', function() {
 
 // 5. What does the code do in exceptional circumstances? Specifically, if you divide by zero, what is the effect? Write a test to describe what you'd prefer to happen, and then correct the code to make that test pass (you will need to modify the Calculator model to meet this requirement).
 
-  // it("should not be able to divide by zero - stop equals from working so return 0", function() {
-  //   running_total = element(by.css('#running_total'))
-  //   element(by.css('#number2')).click();
-  //   element(by.css('#operator_divide')).click();
-  //   element(by.css('#number0')).click();
-  //   element(by.css('#operator_equals')).click();
-  //   expect(running_total.getAttribute("value")).to.eventually.equal('0');
-  // })
+  it("should not be able to divide by zero - stop equals from working so return 0", function() {
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number2')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute("value")).to.eventually.equal('0');
+  })
 
 });
